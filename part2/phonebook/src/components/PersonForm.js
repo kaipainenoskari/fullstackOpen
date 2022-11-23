@@ -6,7 +6,7 @@ const PersonForm = (p) => {
 
       setTimeout(() => {
         p.setErrorMessage(null)
-      }, 3000)
+      }, 4000)
     }
 
     const addPerson = event => {
@@ -23,20 +23,20 @@ const PersonForm = (p) => {
             noteService.update(findPerson.id, person).then(() => {
               p.setPersons(p.persons.filter(a => a.name !== person.name).concat(person))
               p.setPeople(p.people.filter(a => a.number !== findPerson.number).concat(person))
-              showError(`Added ${person.name}`)
+              showError(`sAdded ${person.name}`)
               p.setNewName('')
               p.setNewNumber('')
               p.setFilter('')
               p.setPeople([])
             }).catch(error => {
-              showError(`Information of ${person.name} has already been removed from server`)
+              showError(`eInformation of ${person.name} has already been removed from server`)
             })
           }
         }
         else {
           noteService.create(person).then(() => {
             p.setPersons(p.persons.concat(person))
-            showError(person.name)
+            showError(`sAdded ${person.name}`)
             p.setNewName('')
             p.setNewNumber('')
             p.setFilter('')

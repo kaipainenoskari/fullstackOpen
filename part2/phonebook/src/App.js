@@ -6,11 +6,23 @@ import './index.css'
 
 const Notification = ({ message }) => {
   if (message === null) return null
-  return (
-    <div className='error'>
-      {message}
-    </div>
-  )
+  else {
+    const m = message.slice(1)
+    if (message[0] === 'e') {
+      return (
+      <div className='error'>
+        {m}
+      </div>
+      )
+    }
+    else if (message[0] === 's') {
+      return (
+        <div className='success'>
+          {m}
+        </div>
+      )
+    }
+  }
 }
 
 const App = ({ data }) => {
