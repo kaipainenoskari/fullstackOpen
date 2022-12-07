@@ -6,7 +6,7 @@ const PersonForm = (p) => {
 
       setTimeout(() => {
         p.setErrorMessage(null)
-      }, 4000)
+      }, 5000)
     }
 
     const addPerson = event => {
@@ -40,6 +40,8 @@ const PersonForm = (p) => {
             p.setNewNumber('')
             p.setFilter('')
             p.setPeople([])
+          }).catch(error => {
+            showError(`e${error.response.data.error}`)
           })
         }
       }
