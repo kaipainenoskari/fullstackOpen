@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QyIiwiaWQiOiI2Mzk0OTliZjRkNDY1ZDNmYmNlZDM0MTciLCJpYXQiOjE2NzA2ODMwNzYsImV4cCI6MTY3MDY4NjY3Nn0.ORl9h2dz-uBgadN0w8aUPT3GyOJS9Rgc3f1NVbwx74g
+
+{
+    "title": "tarina",
+    "author": "root2",
+    "url": "google.com",
+    "likes": 14
+}
