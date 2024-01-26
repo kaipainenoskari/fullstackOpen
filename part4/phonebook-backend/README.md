@@ -1,1 +1,1 @@
-https://phonebook-kaipainen.fly.dev/
+https://phonebook-kaipainen.fly.dev/ (Offline)
